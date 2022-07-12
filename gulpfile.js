@@ -128,6 +128,7 @@ const copyResource = (done) => {
     "source/manifest.webmanifest",
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
+    "source/Readme.md",
     "source/img/favicons/*.{svg,png}",
     "source/leaflet/**/*.*",
   ], {
@@ -198,23 +199,3 @@ exports.default = gulp.series(
   styles, html, script, server, watcher
 );
 
-// exports.default = gulp.series(
-//   styles, html, copyForSource, server, watcher
-// );
-
-// exports.default = gulp.series(
-//   clean,
-//   copyForSource,
-//   gulp.parallel(
-//     styles,
-//     html,
-//   ),
-//   gulp.series(
-//     server,
-//     watcher
-//   ));
-
-
-// exports.default = gulp.series(
-//   clean, copyForSource, html, styles, server, watcher,
-// );
