@@ -2,17 +2,17 @@
   @include reset-indent();
 
 // PP
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-image: url( '../../img/pp/m.webp' );
+  // background-repeat: no-repeat;
+  // background-position: 50% 0;
+  // background-image: url( '../../img/pp/m.webp' );
 
-  @media (min-width: 768px) {
-    background-image: url( '../../img/pp/t.webp' );
-  }
+  // @media (min-width: 768px) {
+  //   background-image: url( '../../img/pp/t.webp' );
+  // }
 
-  @media (min-width: 1440px) {
-    background-image: url( '../../img/pp/d.webp' );
-  }
+  // @media (min-width: 1440px) {
+  //   background-image: url( '../../img/pp/d.webp' );
+  // }
 }
 
 .page__body {
@@ -20,6 +20,8 @@
   @include font-basic-page();
   min-height: 100vh;
   font-family: $font-family__basic;
+
+  // PP
   // opacity: 0.4;
 }
 
