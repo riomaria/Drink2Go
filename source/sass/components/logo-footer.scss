@@ -1,0 +1,33 @@
+.logo-footer {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    min-width: 318px;
+    max-width: 320px;
+  }
+}
+
+.logo-footer__title {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    @include font-basic-page($font-size--small, $line-height--little);
+    order: 1;
+    display: block;
+    margin-bottom: 53px;
+  }
+}
+
+.logo-footer__link {
+  display: block;
+}
+
+.logo-footer__img {
+  display: block;
+  width: 82px;
+  height: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+  }
+}

@@ -1,0 +1,30 @@
+.footer {
+  @media (min-width: $desktop-width) {
+    @include page-padding();
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+}
+
+.footer__basic-info {
+  @include page-padding();
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--theme__tinge);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 42px;
+    padding-bottom: 28px;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 30px;
+    padding: 0;
+  }
+}

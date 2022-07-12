@@ -1,0 +1,72 @@
+.control__button {
+  @include reset-indent();
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25px;
+  background-color: transparent;
+  border: none;
+  fill: var(--theme__primary);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, var(--theme__basic) 0%, var(--theme__basic--light) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  &:disabled {
+    background: none;
+    background-color: transparent;
+    fill: var(--theme__third);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 77.4%;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
+  }
+
+}
+.control__button--prev {
+  left: 0;
+}
+
+.control__button--next {
+  right: 0;
+}
+
+.control__icon {
+  width: 11px;
+  height: 20px;
+}
+
+.control__icon--prev {
+  transform: translateX(-3px);
+
+  @media (min-width: $tablet-width) {
+    transform: translateY(2px) translateX(-1px);
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: translateY(0) translateX(-1px);
+  }
+}
+
+.control__icon--next {
+  transform: rotate(180deg) translateX(-3px);
+
+  @media (min-width: $tablet-width) {
+    transform: translateY(2px) rotate(180deg);
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: translateY(1px) rotate(180deg);
+  }
+}

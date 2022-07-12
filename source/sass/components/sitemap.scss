@@ -1,0 +1,114 @@
+.sitemap__list {
+  @include reset-list();
+  padding-bottom: 20px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include page-padding();
+    display: flex;
+    justify-content: space-between;
+    margin-right: -30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    padding: 0;
+    padding-top: 8px;
+  }
+}
+
+.sitemap__sublist {
+  @include reset-list();
+  padding-top: 12px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    flex: 1 1 30%;
+    min-width: 223px;
+    max-width: 240px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 317px;
+    padding-bottom: 0;
+  }
+}
+
+.sitemap__item {
+  @include page-padding();
+  @include font-sitemap();
+  padding-top: 20px;
+  border-bottom: 1px solid var(--theme__tinge);
+
+  @media (min-width: $tablet-width) {
+    margin-right: 30px;
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+.sitemap__subitem {
+  margin-bottom: 4px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sitemap__link {
+  @include link-basic();
+  @include font-basic-page($font-size--little, $line-height--little, $font-weight__medium);
+  padding: 8px 8px 8px 0;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: var(--primary__bright);
+  }
+
+  &:active {
+    color: var(--primary__dark);
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 222px;
+    max-width: 317px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 317px;
+  }
+}
+
+.sitemap__sublist--special {
+  padding-bottom: 12px;
+}
+
+.sitemap__subitem--special {
+  margin-bottom: 0;
+}
+
+.sitemap__link--special {
+  @include font-basic-page($font-size--small, $line-height--small, $font-weight__normal);
+  position: relative;
+  min-width: 260px;
+  padding-left: 19px;
+  letter-spacing: normal;
+  text-transform: none;
+
+  @media (min-width: $tablet-width) {
+    min-width: 222px;
+  }
+}
+
+.sitemap__icon {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 13px;
+  height: 16px;
+  fill: var(--theme__primary);
+}

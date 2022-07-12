@@ -1,0 +1,28 @@
+/* Global abstracts */
+@import "./abstracts/fonts.scss";
+@import "./abstracts/variables.scss";
+@import "./abstracts/mixins.scss";
+@import "./abstracts/settings.scss";
+
+/* Components */
+@import "./components/page.scss";
+@import "./components/main-header.scss";
+@import "./components/logo-header.scss";
+@import "./components/main-navigation.scss";
+@import "./components/user-menu.scss";
+@import "./components/promo.scss";
+@import "./components/control.scss";
+@import "./components/dots-navigation.scss";
+@import "./components/features.scss";
+@import "./components/catalog.scss";
+@import "./components/filter.scss";
+@import "./components/range-filter.scss";
+@import "./components/sort.scss";
+@import "./components/pagination.scss";
+@import "./components/product-card.scss";
+@import "./components/map.scss";
+@import "./components/footer.scss";
+@import "./components/logo-footer.scss";
+@import "./components/social.scss";
+@import "./components/sitemap.scss";
+@import "./components/production.scss";

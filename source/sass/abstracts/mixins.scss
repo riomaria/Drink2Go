@@ -1,0 +1,85 @@
+@mixin link-basic {
+  display: block;
+  font-family: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+@mixin reset-indent() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin page-padding {
+  padding: 0 20px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px;
+  }
+}
+
+@mixin font-basic-page (
+  $size: $font-size--small,
+  $line-height: $line-height--small,
+  $weight: $font-weight__normal,
+  $font-color: var(--theme__second),
+  $family: $font-family__basic) {
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $weight;
+    color: $font-color;
+    font-family: $family;
+}
+
+@mixin font-heading() {
+  font-size: $font-size--interim;
+  line-height: $line-height--interim;
+  font-weight: $font-weight__bold;
+  color: var(--theme__second);
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size--large;
+    line-height: $line-height--large;
+  }
+}
+
+@mixin font-subheading () {
+  font-size: $font-size--middle;
+  line-height: $line-height--modarate;
+  font-weight: $font-weight__bold;
+  color: var(--theme__second);
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size--interim;
+    line-height: $line-height--interim;
+  }
+}
+
+@mixin font-filter-title () {
+  font-size: $font-size--basic;
+  line-height: $line-height--basic;
+  font-weight: $font-weight__semibold;
+}
+
+@mixin font-special() {
+  font-size: $font-size--little;
+  line-height: $line-height--little;
+  color: var(--theme__primary);
+  font-weight: $font-weight__bold;
+  letter-spacing: $letter-spacing__strong;
+  text-transform: uppercase;
+}
+
+@mixin font-sitemap() {
+  font-size: $font-size--small;
+  line-height: $line-height--small;
+  color: var(--theme__primary);
+  font-weight: $font-weight__bold;
+  letter-spacing: $letter-spacing__basic;
+}

@@ -1,0 +1,146 @@
+.sort {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 280px;
+  margin-left: auto;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-left: auto;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.sort__title {
+  @include reset-indent();
+  @include font-filter-title();
+  margin-right: 8px;
+  padding: 6px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+    padding: 7px 0;
+  }
+}
+
+.sort__wrapper {
+  position: relative;
+}
+
+.sort__dropdown {
+  @include reset-indent();
+  @include font-basic-page($font-size--basic, $line-height--basic, $font-weight__semibold, var(--theme__primary));
+  position: relative;
+  display: block;
+  min-width: 165px;
+  min-height: 32px;
+  padding: 6px 30px 4px 10px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: none;
+  text-transform: lowercase;
+  text-align: right;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--theme__tinge);
+  }
+
+  &::after {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 10px;
+    height: 6px;
+    content: '';
+    background-color: transparent;
+    background-image: url('../../img/svg/button-arrow.svg');
+    background-repeat: no-repeat;
+  }
+}
+
+.sort__icon {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  width: 10px;
+  height: 6px;
+  fill: var(--theme__primary);
+}
+
+.sort__list {
+  @include reset-list();
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  min-width: 190px;
+  border-radius: 4px;
+  background-color: tan;
+  box-shadow: 0px 5px 15px var(--shadow__second);
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.sort__list--close {
+  display: none;
+}
+
+.sort__button {
+  @include font-basic-page($font-size--basic, $line-height--basic);
+  display: block;
+  width: 100%;
+  padding: 8px 20px;
+  background-color: var(--theme__basic);
+  border: none;
+  border-bottom: 1px solid var(--theme__tinge);
+  text-transform: lowercase;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--theme__tinge);
+  }
+
+  &:active {
+    color: var(--theme__basic);
+    background-color: var(--theme__primary);
+  }
+}
+
+.sort__item:first-child .sort__button {
+  border-radius: 4px 4px 0 0;
+}
+
+.sort__item:last-child .sort__button {
+  border-radius: 0 0 4px 4px;
+}
+
+.sort__item--checked .sort__button {
+  color: var(--theme__basic);
+  background-color: var(--theme__primary);
+
+  &:hover,
+  &:focus {
+    color: var(--theme__second);
+    background-color: var(--theme__tinge);
+  }
+
+  &:active {
+    color: var(--theme__basic);
+    background-color: var(--theme__primary);
+  }
+}
+
+.sort__value {
+  display: none;
+}

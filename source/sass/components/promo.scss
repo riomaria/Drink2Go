@@ -1,0 +1,223 @@
+.promo {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-color: var(--add__basic);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 0;
+    background: linear-gradient(to bottom, var(--add__basic) 77.4%, var(--theme__basic) 77.4%);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+    padding-bottom: 65px;
+    background: none;
+    background-color: var(--add__basic);
+  }
+}
+
+.promo__container {
+  @include page-padding();
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    align-items: center;
+  }
+}
+
+.promo__list {
+  @include reset-list();
+}
+
+.promo__item {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
+.promo__item--current {
+  display: flex;
+}
+
+.promo__info-container {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    align-items: flex-start;
+    margin-bottom: 0;
+    margin-left: 30px;
+  }
+}
+
+.promo__title {
+  @include reset-indent();
+  max-width: 400px;
+  margin-bottom: 8px;
+  padding: 0 10px;
+  font-size: $font-size--big;
+  line-height: $line-height--big;
+  font-weight: $font-weight__bold;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: $letter-spacing__basic;
+
+  @media (min-width: $tablet-width) {
+    max-width: 600px;
+    margin-bottom: 16px;
+    padding: 0;
+    font-size: $font-size--huge;
+    line-height: $line-height--huge;
+  }
+}
+
+.promo__label {
+  @include reset-indent();
+  order: -1;
+  max-width: 200px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  font-size: $font-size--little;
+  line-height: $line-height--little;
+  font-weight: $font-weight__bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing__strong;
+  color: var(--theme__primary);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 4px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -6px;
+  }
+}
+
+.promo__text {
+  @include reset-indent();
+  max-width: 400px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    max-width: 600px;
+    font-size: $font-size--modarate;
+    line-height: $line-height--modarate;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+    text-align: left;
+  }
+}
+
+.promo__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 400px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 600px;
+  }
+}
+
+.promo__value {
+  display: flex;
+  padding-right: 20px;
+}
+
+.promo__price {
+  @include reset-indent();
+}
+
+.promo__price--old {
+  margin-right: 6px;
+  margin-top: 1px;
+  font-size: $font-size--basic;
+  line-height: $line-height--modarate;
+  color: var(--theme__primary);
+}
+
+.promo__price--actual {
+  font-size: $font-size--modarate;
+  line-height: $line-height--modarate;
+  font-weight: $font-weight__semibold;
+}
+
+.promo__button {
+  display: block;
+  min-width: 113px;
+  padding: 9px 10px;
+  font-family: inherit;
+  font-size: $font-size--basic;
+  line-height: $line-height--basic;
+  color: var(--theme__basic);
+  background-color: var(--theme__primary);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--primary__bright);
+  }
+
+  &:active {
+    background-color: var(--primary__dark);
+  }
+
+  &:disabled {
+    background-color: var(--theme__third);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 10px;
+  }
+}
+
+.promo__img {
+  display: block;
+  width: 280px;
+  height: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.promo__dots-navigation {
+  order: 2;
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

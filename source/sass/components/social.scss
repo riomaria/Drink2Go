@@ -1,0 +1,58 @@
+.social__list {
+  @include reset-list();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 200px;
+  margin-right: -20px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 320px;
+    justify-content: flex-start;
+  }
+}
+
+.social__link {
+  @include link-basic();
+  display: block;
+  min-width: 40px;
+  min-height: 40px;
+  margin-right: 20px;
+  padding: 8px 9px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--theme__tinge);
+  }
+
+  &:active {
+    background-color: var(--theme__accent--light);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 7px 9px;
+  }
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: var(--theme__primary);
+}
+
+.social__link:active .social__icon {
+  fill: var(--primary__dark);
+}
+
+.social__icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: var(--theme__third);
+}
+
+.social__icon--pinterest {
+  width: 22px;
+  height: 22px;
+}
